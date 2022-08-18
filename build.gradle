@@ -21,6 +21,6 @@ dependencies {
     testImplementation 'io.cucumber:cucumber-junit:7.3.4'
 }
 
-test {
-    useJUnitPlatform()
+test{
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
 }
