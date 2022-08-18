@@ -7,22 +7,23 @@ public class GoogleSteps {
 
     GooglePage google = new GooglePage();
 
-    @Given("^I am on the google search page$")
+    @Given("^navigate to google$")
     public void navigateToGoogle() {
-        navigateToGoogle();
+        google.navigateToGoogle();
+        google.clickGoogleSearch();
     }
 
-    @When("^I enter a search criteria$")
+    @When("^looking for something$")
     public void lookingForSomething() {
 
     }
 
-    @And("^I press on the search button$")
+    @And("^click on the search button$")
     public void searchInGoogle() {
 
     }
 
-    @Then("^The results match the criteria$")
+    @Then("^obtain the output$")
     public void validateResults() {
 
     }
