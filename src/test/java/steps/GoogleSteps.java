@@ -10,17 +10,17 @@ public class GoogleSteps {
     @Given("^navigate to google$")
     public void navigateToGoogle() {
         google.navigateToGoogle();
-        google.clickGoogleSearch();
+
     }
 
     @When("^looking for something$")
     public void lookingForSomething() {
-
+    google.enterSearchCriteria("Google");
     }
 
     @And("^click on the search button$")
     public void searchInGoogle() {
-
+        google.clickGoogleSearch();
     }
 
     @Then("^obtain the output$")
