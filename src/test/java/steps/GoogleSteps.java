@@ -11,12 +11,11 @@ public class GoogleSteps {
     @Given("^navigate to google$")
     public void navigateToGoogle() {
         google.navigateToGoogle();
-
     }
 
     @When("^looking for something$")
     public void lookingForSomething() {
-    google.enterSearchCriteria("Google");
+        google.enterSearchCriteria("Google");
     }
 
     @And("^click on the search button$")
