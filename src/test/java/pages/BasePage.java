@@ -18,6 +18,7 @@ public class BasePage {
 
     static {
         ChromeOptions chromeOptions = new ChromeOptions();
+        System.setProperty("webdriver.chrome.driver", "/Users/tomasbrainovich/Documents/Drivers/chromedriver");
         driver = new ChromeDriver(chromeOptions);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
