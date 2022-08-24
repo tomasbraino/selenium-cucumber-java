@@ -10,20 +10,12 @@ public class TestSandBoxSteps {
     public void navigateToDemoQa() {
         demoQaPage.navigateToDemoQa();
     }
-    @When("^i click on the dropdown$")
-    public void clickTheDropDown() {
-        demoQaPage.clickOnTheDropDown();
-    }
-    @And("^the dropdown show me the options$")
+
+    @And("^obtain the option selected$")
     public void selectOption() {
-       // demoQaPage.selectFromDropDown();
+        demoQaPage.clickElement(demoQaPage.dropDown);
+        demoQaPage.selectCategory("50");
     }
-    @Then("^obtain the option selected$")
-    public void getTheOptionSelected() {
-        //demoQaPage.navigateToDemoQa();
-    }
-
-
 
 
 }
