@@ -10,8 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.List;
-import java.util.Set;
+
 
 public class BasePage {
     protected static WebDriver driver;
@@ -33,25 +32,45 @@ public class BasePage {
         driver.get(url);
     }
 
-    private WebElement Find(String locator){
+    private WebElement Find(String locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
 
-    public void clickElement(String locator){
+    public void clickElement(String locator) {
         Find(locator).click();
     }
 
-    public void write(String locator, String textToWrite){
+    public void write(String locator, String textToWrite) {
         Find(locator).clear();
         Find(locator).sendKeys(textToWrite);
     }
 
-    public void selectFromDropDown(String locator, String valueToSelect){
+    public void selectFromDropDown(String locator, String valueToSelect) {
         Select dropDown = new Select(Find(locator));
         dropDown.selectByValue(valueToSelect);
     }
-    public void selectFromDropDown(String locator, Integer valueToSelect){
+
+    public void selectFromDropDown(String locator, Integer valueToSelect) {
         Select dropDown = new Select(Find(locator));
         dropDown.selectByIndex(valueToSelect);
     }
+
+    public String getTheData(String locator, int row, int col) {
+        String cellINeed = locator + "/table/tbody/tr[" + row + "]/td[" + col + "]";
+        return Find(cellINeed).getText();
+    }
+
+//    public void switchToiFrame(int iframeId) {
+//        driver.switchTo().frame(iFrameIndex);
+//
+//    }
+
+    public void switchToParentFrame() {
+        driver.switchTo().parentFrame();
+    }
+
+    public void dismissAlert() {
+        driver.switchTo().alert().dismiss();
+    }
+
 }
