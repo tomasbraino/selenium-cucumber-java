@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 
 public class BasePage {
@@ -30,6 +31,10 @@ public class BasePage {
 
     public static void navigateTo(String url) {
         driver.get(url);
+    }
+
+    public static void closeBrowser(){
+        driver.quit();
     }
 
     private WebElement Find(String locator) {
@@ -56,14 +61,14 @@ public class BasePage {
     }
 
     public String getTheData(String locator, int row, int col) {
-        String cellINeed = locator + "/table/tbody/tr[" + row + "]/td[" + col + "]";
+        String cellINeed = locator + "/tbody/tr[" + row + "]/td[" + col + "]";
         return Find(cellINeed).getText();
     }
 
-//    public void switchToiFrame(int iframeId) {
-//        driver.switchTo().frame(iFrameIndex);
-//
-//    }
+    public void switchToiFrame(int iFrameIndex) {
+        driver.switchTo().frame(iFrameIndex);
+
+    }
 
     public void switchToParentFrame() {
         driver.switchTo().parentFrame();
@@ -71,6 +76,18 @@ public class BasePage {
 
     public void dismissAlert() {
         driver.switchTo().alert().dismiss();
+    }
+
+    public String textFromElement(String locator) {
+        return Find(locator).getText();
+    }
+
+    public boolean elementIsDisplayed(String locator){
+        return Find(locator).isDisplayed();
+    }
+
+    public List<WebElement> bringMeAllElements(String locator){
+        return driver.findElements(By.className(locator));
     }
 
 }

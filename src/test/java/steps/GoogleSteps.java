@@ -1,6 +1,7 @@
 package steps;
 
 import io.cucumber.java.en.*;
+import org.junit.Assert;
 import pages.GooglePage;
 
 
@@ -25,7 +26,7 @@ public class GoogleSteps {
 
     @Then("^obtain the output$")
     public void validateResults() {
-
+        Assert.assertEquals("Text expected", google.firstResult());
     }
 
 }
