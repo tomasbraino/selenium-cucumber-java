@@ -2,6 +2,7 @@ package runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import io.cucumber.plugin.Plugin;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 import pages.BasePage;
@@ -10,7 +11,9 @@ import pages.BasePage;
 @CucumberOptions(
         features = {"src/test/resources/features"},
         glue = "steps",
-        tags = "@Grid and @Smoke"
+        plugin = { "pretty", "html:target/cucumber-reports"},
+        monochrome = true,
+        tags = "@Test"
 
 )
 

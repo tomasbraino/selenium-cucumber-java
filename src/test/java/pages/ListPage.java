@@ -18,7 +18,7 @@ public class ListPage extends BasePage {
     }
 
     public void enterTheSearchCriteria() throws InterruptedException {
-        Thread.sleep(600);
+        Thread.sleep(600);//a thread.sleep is a bad practice
         write(searchField, "tv 55");
     }
 
