@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ListPage extends BasePage {
     private String searchField = "//*[@id='twotabsearchtextbox']";
-    private String searchResults = "s-suggestion-container";
+    private String searchResults = "name";
 
     public ListPage() {
         super(driver);
@@ -18,13 +18,17 @@ public class ListPage extends BasePage {
     }
 
     public void enterTheSearchCriteria() throws InterruptedException {
-        Thread.sleep(600);//a thread.sleep is a bad practice
-        write(searchField, "tv 55");
+        Thread.sleep(900); //a thread.sleep is a bad practice
+        write(searchField, "alexa");
     }
+
+   /* public void clickTheDropdown(){
+        clickElement(searchField);
+    }*/
 
     public List<String> getAllSearchResults() {
         List<WebElement> list = bringMeAllElements(searchResults);
-        List<String> products = new ArrayList<String>();
+        List<String> products = new ArrayList<>();
 
         for (WebElement e : list) {
             //add the results to the station list

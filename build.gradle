@@ -15,16 +15,29 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.3.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.17.0'
+
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.6.3'
+
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.15.0'
+
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
-    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.5.0'
-    testImplementation 'io.cucumber:cucumber-junit:7.5.0'
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.15.0'
+
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-core
     implementation group: 'io.cucumber', name: 'cucumber-core', version: '7.5.0'
+
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
     testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.0'
+
     // https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber6-adapter
     implementation group: 'tech.grasshopper', name: 'extentreports-cucumber6-adapter', version: '2.13.0'
+
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation group: 'org.testng', name: 'testng', version: '7.9.0'
+
 
 
 }

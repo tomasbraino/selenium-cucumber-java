@@ -1,6 +1,6 @@
 Feature: A new feature for Amazon
 
-  @Test
+
   Scenario Outline: As a customer, I want to navigate inside the Amazon web site and get the new Alexa.
 
     Given navigate to amazon web site

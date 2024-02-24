@@ -22,12 +22,12 @@ public class ListSteps {
     @Then("^show the text selected$")
     public void showTheTextSelected() throws InterruptedException {
         List<String> list = listPage.getAllSearchResults();
-        boolean textIsThere = list.contains("tv 55");
+        boolean textIsThere = list.contains("alexa dot");
 
         if (textIsThere) {
-            System.out.println("The product that you are looking for is available");
+            System.out.println("The product that you are looking for, is available");
         } else {
-            throw new InterruptedException("The product that you are looking for is not available");
+            throw new InterruptedException("The product that you are looking for, is not available");
         }
 
     }

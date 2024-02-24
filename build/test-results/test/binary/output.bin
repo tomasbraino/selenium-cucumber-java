@@ -1,0 +1,20 @@
+
+@Test
+{Scenario: As a test engineer, I try to show differents items inside a list # src/test/resources/features/Sandbox.feature:7
+q  Given navigate to web page                                               # steps.ListSteps.navigateToTheList()
+s  When search inside the list                                              # steps.ListSteps.searchInsideTheList()
+Õ      org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='twotabsearchtextbox'] (tried for 10 second(s) with 500 milliseconds interval)
+7Build info: version: '4.17.0', revision: 'e52b1be057*'
+aSystem info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.2', java.version: '11.0.12'
+5Driver info: org.openqa.selenium.chrome.ChromeDriver
+ŽCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.160, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: /var/folders/1h/2g6fvf3x3vb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51613}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51613/devtoo..., se:cdpVersion: 121.0.6167.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+-Session ID: 5512b11180a89d13fe3ce78b0bcfa7fe
+Y	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+I	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+*	at pages.BasePage.Find(BasePage.java:41)
++	at pages.BasePage.write(BasePage.java:49)
+<	at pages.ListPage.enterTheSearchCriteria(ListPage.java:22)
+;	at steps.ListSteps.searchInsideTheList(ListSteps.java:19)
+	at âœ½.search inside the list(file:///Users/tomasbrainovich/IdeaProjects/selenium-cucumber-java/src/test/resources/features/Sandbox.feature:9)
+
+s  Then show the text selected                                              # steps.ListSteps.showTheTextSelected()
