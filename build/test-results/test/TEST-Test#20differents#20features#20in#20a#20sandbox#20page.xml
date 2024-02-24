@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test differents features in a sandbox page" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-02-14T22:14:53" hostname="Tomass-MacBook-Pro.local" time="19.955">
+  <properties/>
+  <testcase name="As a test engineer, I try to show differents items inside a list" classname="Test differents features in a sandbox page" time="19.955">
+    <failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='twotabsearchtextbox'] (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.17.0', revision: 'e52b1be057*'&#10;System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.2', java.version: '11.0.12'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.160, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: /var/folders/1h/2g6fvf3x3vb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51613}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51613/devtoo..., se:cdpVersion: 121.0.6167.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 5512b11180a89d13fe3ce78b0bcfa7fe" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='twotabsearchtextbox'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.2', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.160, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: /var/folders/1h/2g6fvf3x3vb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51613}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51613/devtoo..., se:cdpVersion: 121.0.6167.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5512b11180a89d13fe3ce78b0bcfa7fe
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//pages.BasePage.Find(BasePage.java:41)
+	at app//pages.BasePage.write(BasePage.java:49)
+	at app//pages.ListPage.enterTheSearchCriteria(ListPage.java:22)
+	at app//steps.ListSteps.searchInsideTheList(ListSteps.java:19)
+	at ✽.search inside the list(file:///Users/tomasbrainovich/IdeaProjects/selenium-cucumber-java/src/test/resources/features/Sandbox.feature:9)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+@Test
+Scenario: As a test engineer, I try to show differents items inside a list # src/test/resources/features/Sandbox.feature:7
+  Given navigate to web page                                               # steps.ListSteps.navigateToTheList()
+  When search inside the list                                              # steps.ListSteps.searchInsideTheList()
+      org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='twotabsearchtextbox'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.2', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.160, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: /var/folders/1h/2g6fvf3x3vb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51613}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51613/devtoo..., se:cdpVersion: 121.0.6167.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5512b11180a89d13fe3ce78b0bcfa7fe
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.BasePage.Find(BasePage.java:41)
+	at pages.BasePage.write(BasePage.java:49)
+	at pages.ListPage.enterTheSearchCriteria(ListPage.java:22)
+	at steps.ListSteps.searchInsideTheList(ListSteps.java:19)
+	at ✽.search inside the list(file:///Users/tomasbrainovich/IdeaProjects/selenium-cucumber-java/src/test/resources/features/Sandbox.feature:9)
+
+  Then show the text selected                                              # steps.ListSteps.showTheTextSelected()
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
