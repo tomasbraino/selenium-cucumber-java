@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">19.955s</div>
+<div class="counter">0.071s</div>
 <p>duration</p>
 </div>
 </td>
@@ -76,19 +76,25 @@
 <a name="As a test engineer, I try to show differents items inside a list"></a>
 <h3 class="failures">As a test engineer, I try to show differents items inside a list</h3>
 <span class="code">
-<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='twotabsearchtextbox'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.2', java.version: '11.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.160, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: /var/folders/1h/2g6fvf3x3vb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51613}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51613/devtoo..., se:cdpVersion: 121.0.6167.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5512b11180a89d13fe3ce78b0bcfa7fe
-	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at app//pages.BasePage.Find(BasePage.java:41)
-	at app//pages.BasePage.write(BasePage.java:49)
-	at app//pages.ListPage.enterTheSearchCriteria(ListPage.java:22)
-	at app//steps.ListSteps.searchInsideTheList(ListSteps.java:19)
-	at ✽.search inside the list(file:///Users/tomasbrainovich/IdeaProjects/selenium-cucumber-java/src/test/resources/features/Sandbox.feature:9)
+<pre>io.cucumber.junit.UndefinedStepException: The step 'navigate to web page' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;navigate to web page&quot;)
+public void navigate_to_web_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;search inside the list&quot;)
+public void search_inside_the_list() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;show the text selected&quot;)
+public void show_the_text_selected() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
 </pre>
 </span>
 </div>
@@ -105,7 +111,7 @@ Session ID: 5512b11180a89d13fe3ce78b0bcfa7fe
 </thead>
 <tr>
 <td class="failures">As a test engineer, I try to show differents items inside a list</td>
-<td class="failures">19.955s</td>
+<td class="failures">0.071s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -116,23 +122,9 @@ Session ID: 5512b11180a89d13fe3ce78b0bcfa7fe
 <pre>
 @Test
 Scenario: As a test engineer, I try to show differents items inside a list # src/test/resources/features/Sandbox.feature:7
-  Given navigate to web page                                               # steps.ListSteps.navigateToTheList()
-  When search inside the list                                              # steps.ListSteps.searchInsideTheList()
-      org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='twotabsearchtextbox'] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.2', java.version: '11.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.160, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: /var/folders/1h/2g6fvf3x3vb...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51613}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51613/devtoo..., se:cdpVersion: 121.0.6167.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5512b11180a89d13fe3ce78b0bcfa7fe
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.BasePage.Find(BasePage.java:41)
-	at pages.BasePage.write(BasePage.java:49)
-	at pages.ListPage.enterTheSearchCriteria(ListPage.java:22)
-	at steps.ListSteps.searchInsideTheList(ListSteps.java:19)
-	at ✽.search inside the list(file:///Users/tomasbrainovich/IdeaProjects/selenium-cucumber-java/src/test/resources/features/Sandbox.feature:9)
-
-  Then show the text selected                                              # steps.ListSteps.showTheTextSelected()
+  Given navigate to web page
+  When search inside the list
+  Then show the text selected
 </pre>
 </span>
 </div>
@@ -144,7 +136,7 @@ Session ID: 5512b11180a89d13fe3ce78b0bcfa7fe
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at Feb 14, 2024, 7:15:14 PM</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 11 jun 2024 17:31:46</p>
 </div>
 </div>
 </body>

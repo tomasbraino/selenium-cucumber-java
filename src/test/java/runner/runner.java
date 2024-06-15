@@ -9,8 +9,8 @@ import pages.BasePage;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/features"},
-        glue = "steps",
+        features = "src/test/resources",
+        glue = "src/test/java/steps",
         plugin = { "pretty", "html:target/cucumber-reports"},
         monochrome = true,
         tags = "@Test"

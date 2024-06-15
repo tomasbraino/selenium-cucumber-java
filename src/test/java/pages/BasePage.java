@@ -19,9 +19,9 @@ public class BasePage {
 
     static {
         ChromeOptions chromeOptions = new ChromeOptions();
-        System.setProperty("webdriver.chrome.driver", "/Users/tomasbrainovich/Documents/Drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "C:/Users/USER/Desktop/chromedriver-win64");
         driver = new ChromeDriver(chromeOptions);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     public BasePage(WebDriver driver) {
@@ -38,7 +38,7 @@ public class BasePage {
     }
 
     private WebElement Find(String locator) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+        return wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
     }
 
     public void clickElement(String locator) {
