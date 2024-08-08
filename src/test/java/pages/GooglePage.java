@@ -4,8 +4,8 @@ import org.openqa.selenium.WebElement;
 
 public class GooglePage extends BasePage {
     //locators
-    private final String searchButton = "//input[@value='Buscar con Google']";
-    private final String searchTextField = "//input[@title='Buscar']";
+    private final String searchButton = "//div[@class='FPdoLc lJ9FBc']//input[@name='btnK']";
+    private final String searchTextField = "//textarea[@id='APjFqb']";
     private String firstResult = "";
 
     //constuctor
